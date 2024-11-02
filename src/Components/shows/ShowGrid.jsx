@@ -1,7 +1,8 @@
-import { useEffect, useReducer } from 'react';
+//import { useEffect, useReducer } from 'react';
 import ShowCard from './ShowCard';
 import { useStarredShow } from '../../lib/useStarredShow';
 import { FlexGrid } from '../Common/FlexGrid';
+import noimage from "../../lib/no-image.png"
 //import { useLoaderData } from 'react-router-dom';
 
 
@@ -28,7 +29,7 @@ const ShowGrid = ({shows})=>{
             id={data.show.id} 
             name={data.show.name} 
             image=
-            {data.show.image? data.show.image.medium:'/no-image.png' } 
+            {data.show.image? data.show.image.medium: noimage } 
               summary={data.show.summary}
               onStarMeClick={onStarMeClick}
               isStarred={starredShows.includes(data.show.id)}
